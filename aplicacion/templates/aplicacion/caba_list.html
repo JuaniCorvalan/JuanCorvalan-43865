@@ -1,0 +1,74 @@
+{% extends 'aplicacion/paginaprincipal.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    CABA
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    CABA:
+{% endblock cabecera %}
+    
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h3>Agregar</h3></td>
+        <td>
+            <a
+            href="{% url 'create_caba' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+            <th>Telefono</th>
+            <th>Deporte</th>
+            <th>Acciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    {% for caba in caba_list %}
+    <tr>
+        <td>{{ caba.id }}</td>
+        <td>{{ caba.nombre }}</td>
+        <td>{{ caba.localidad }}</td>
+        <td>{{ caba.telefono }}</td>
+        <td>{{ caba.deporte }}</td>
+           <td>
+           <a
+                href="{% url 'detail_caba' caba.id  %}"
+                class="btn btn-info"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                ><i class="fa fa-search fa-sm" title="View Record"></i>
+            </a>
+            <a
+              href="{% url 'update_caba' caba.id  %}"
+              class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+            </a>
+            <a
+              href="{% url 'delete_caba' caba.id  %}"
+              class="btn btn-danger"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+            </a>
+          </td>        
+        </tr>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

@@ -1,0 +1,40 @@
+{% extends 'aplicacion/paginaprincipal.html' %} 
+{% load static %} 
+{% block titulo %}Zona Norte{% endblock titulo %} 
+{% block cabecera %}Zona Norte{% endblock cabecera %} 
+{% block contenido %}
+<table>
+    <tr>
+        <td><h2>Cancha: {{object}}</h2></td>
+    </tr>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Localidad</th>
+      <th>Telefono</th>
+      <th>Deporte</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{ object.id }}</td>
+      <td>{{ object.nombre }}</td>
+      <td>{{ object.localidad }}</td>
+      <td>{{ object.telefono }}</td>
+      <td>{{ object.deporte }}</td>
+    </tr>
+
+  </tbody>
+</table>
+<a
+href="{% url 'zona sur' %}"
+class="btn btn-danger"
+style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+><i class="fa fa-share fa-sm" title="List Back">Volver</i>
+</a>
+{% endblock contenido %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar localidad en Zona Norte</title>
+</head>
+<body>
+    <h2>Buscar localidad en Zona Norte</h2>
+    <form action="/aplicacion/znbuscar2/" method="get">
+        {% csrf_token %}
+        <input type="text" name="localidad" id="localidad"> 
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+</html> 

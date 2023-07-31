@@ -1,0 +1,32 @@
+{% extends "aplicacion/paginaprincipal.html" %}
+{% load static %}
+{% block contenido %}
+{% block cabecera %}
+    Canchas de {{localidad}}
+{% endblock cabecera %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th>Telefono</th>
+                <th>Deporte</th>
+               
+            
+            </tr>
+        </thead>
+        <tbody>
+        {% for zonasur in zona_sur %}
+        <tr>
+            <td>{{ zonasur.nombre }}</td>
+            <td>{{ zonasur.localidad }}</td>
+            <td>{{ zonasur.telefono }}</td>
+            <td>{{ zonasur.deporte }}</td>
+         
+        {% endfor %}
+        </tr>
+        </tbody>
+    </table>    
+    
+{% endblock contenido %}
