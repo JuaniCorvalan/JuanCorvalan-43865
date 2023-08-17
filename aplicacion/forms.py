@@ -37,7 +37,7 @@ class RegistroUsuariosForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = ['email', 'nombre', 'apellido', 'password1', 'password2']
+        fields = ['username', 'email', 'nombre', 'apellido', 'password1', 'password2']
         help_texts = {k:"" for k in fields}
         
         
