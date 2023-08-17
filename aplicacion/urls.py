@@ -1,5 +1,6 @@
 from django.urls import path, include
 from .views import *
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('', paginaprincipal, name="inicio"),
@@ -38,4 +39,15 @@ urlpatterns = [
     path('cababuscar/', cababuscar, name="cababuscar"),
     path('cababuscar2/', cababuscar2, name="cababuscar2"),
 
+
+    path('login/', log_in, name='login'),
+    path('logout/', LogoutView.as_view(template_name="aplicacion/logout.html"), name='logout'),
+    path('register', register, name="register"),
+    path('editar_form', user_edit, name="editar_form"),
+    path('agregar_avatar', agregar_avatar, name="agregar_avatar"),
+    
+    
+    #-----------------------------------------
+    path('comentariozn/<int:zona_norte_id>/', comentariozn, name="comentariozn"),
+   
     ]

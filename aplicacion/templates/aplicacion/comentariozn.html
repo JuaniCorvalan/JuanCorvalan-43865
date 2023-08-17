@@ -1,0 +1,26 @@
+{% extends 'aplicacion/paginaprincipal.html' %}
+{% load static %}
+{% block titulo %}
+    Zona Norte
+{% endblock titulo %}
+{% block cabecera %}
+    Zona Norte:
+{% endblock cabecera %}
+    
+{% block contenido %}
+<h3>Comentarios</h3>
+{% for comentario in comentarios %}
+    <div>
+        <strong>{{ comentario.autor.username }}</strong>
+        <p>{{ comentario.texto }}</p>
+        <small>{{ comentario.fecha }}</small>
+    </div>
+{% endfor %}
+<hr>
+<h3>Añadir Comentario</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Comentar</button>
+</form>
+{% endblock contenido %}
