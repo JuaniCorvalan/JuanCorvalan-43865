@@ -1,6 +1,10 @@
-Mi nombre es Juan Corvalan. Decidi hacer una web estilo blog, la cual sirve para que las personas puedan encontrar
-un sitio donde puedan practicar algun deporte. 
-Es una interfaz sencilla, esta divido por zonas. Norte, Sur, Este y CABA de toda la ciudad de Buenos Aires. 
+Paso a explicar un poco como funciona esta web: 
+
+La idea principal es poder hacer una web para que se pueda encontrar alguna cancha para alquilar en el momento
+que queramos y tambien que nos de informacion sobre un numero de contacto y tambien el deporte que puedo practicar
+en ella. 
+
+Como veras, esta divido por zonas. Norte, Sur, Este y CABA de toda la ciudad de Buenos Aires. 
 Cuando se ingresa a alguna zona se veran las canchas ya ingresadas y tambien tendremos cuatro opciones:
 1. Agregar una nueva
 2. Modificar
@@ -22,8 +26,3 @@ Espero que sea de su agrado!
 Saludos
 
 PD: Abajo de la pagina estan incluidos links a mis redes sociales.
-
-PD2: En Zona Norte tiene incluido la posibilidad de añadir comentarios. Me hubiese gustado agregarselo a todos los 
-modelos pero realmente no llegue con el tiempo. Me costo mucho investigar (las posibilidades de Django Templates y
-entender el HTML) para poder agregar comentarios. Creo que me quedo bien pero lamentablemente no pude reproducirlos 
-en el resto de los modelos. 
