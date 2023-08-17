@@ -21,6 +21,8 @@ user: admin pass: admin123
 
 Realmente disfrute mucho el curso, lo recomendaria a todas las personas que quieren iniciarse en el mundo de la programacion. Por ultimo agradecer al profesor y a los tutores que hicieron que las 13 semanas de duracion sean super calidas y muy llevaderas. 
 
+Dejo el link del video explicativo: https://youtu.be/c1imErjUOoM
+
 Muchas gracias. Saludos.
 
 PD: Abajo de la pagina estan incluidos links a mis redes sociales.
